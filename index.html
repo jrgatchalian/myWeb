@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Gatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,200;0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+</head>
+<body>
+<section class="header" id="header1">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#header1">HOME</a></li>
+                    <li><a href="#about1">ABOUT</a></li>
+                    <li><a href="#skill1">SKILLS</a></li>
+                    <li><a href="#contact1">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+<div class="text-box"  >
+    <h1>I'm <span class="auto-input"></span></h1>
+    <div class="social-links">
+        <a class="social" href="https://www.facebook.com/JrGatchalian4/" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+        <a class="social" href="https://twitter.com/jrgtchln" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+        <a class="social" href="https://www.instagram.com/jrgtchln/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+        <a class="social" href="https://www.linkedin.com/in/johnrobertgatchalian/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+
+    </div>
+    <br><a href="#about1" class="hero-btn">Who am I?</a>
+</div>
+
+</section>
+
+<!-- about -->
+
+<section class="about" id="about1">
+    <h1>Courses</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    
+    <div class="row">
+        <div class = "about-col">
+            <h3>Intermediate</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptas ea architecto. Laborum neque tenetur hic at fuga mollitia necessitatibus cumque doloribus aut incidunt animi illum sint, non deleniti. Assumenda.</p>
+        </div>
+        <div class = "about-col">
+            <h3>Degree</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptas ea architecto. Laborum neque tenetur hic at fuga mollitia necessitatibus cumque doloribus aut incidunt animi illum sint, non deleniti. Assumenda.</p>
+        </div>
+        <div class = "about-col">
+            <h3>Post Graduation</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptas ea architecto. Laborum neque tenetur hic at fuga mollitia necessitatibus cumque doloribus aut incidunt animi illum sint, non deleniti. Assumenda.</p>
+        </div>
+    </div>
+</section>
+
+<!----- skill   -->
+
+<section class="skill" id="skill1">
+    <h1> Main Campus</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+    <div class="row">
+        <div class="skill-col">
+            <img src="images/main.jpg">
+            <div class="layer">
+                <h3>University</h3>
+            </div>
+        </div>
+        <div class="skill-col">
+            <img src="images/main2.jpg">
+            <div class="layer">
+                <h3>Administration Building</h3>
+            </div>
+        </div>
+        <div class="skill-col">
+            <img src="images/main3.jpg">
+            <div class="layer">
+                <h3>University Library</h3>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- contact -->
+
+<section class="contact" id="contact1">
+    <h1>Courses</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    
+    <div class="row">
+        <div class = "contact-col">
+            <h3>Intermediate</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptas ea architecto. Laborum neque tenetur hic at fuga mollitia necessitatibus cumque doloribus aut incidunt animi illum sint, non deleniti. Assumenda.</p>
+        </div>
+        <div class = "contact-col">
+            <h3>Degree</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptas ea architecto. Laborum neque tenetur hic at fuga mollitia necessitatibus cumque doloribus aut incidunt animi illum sint, non deleniti. Assumenda.</p>
+        </div>
+        <div class = "contact-col">
+            <h3>Post Graduation</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptas ea architecto. Laborum neque tenetur hic at fuga mollitia necessitatibus cumque doloribus aut incidunt animi illum sint, non deleniti. Assumenda.</p>
+        </div>
+    </div>
+</section>
+
+
+<!----Javascript for Toggle Menu-->
+<script>
+
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+        navLinks.style.left = "0";
+    }
+    function hideMenu(){
+        navLinks.style.left = "-300px";
+    }
+</script>
+
+<!-------Typewriter-->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed(".auto-input" , {
+        strings: ["Gatch" , "a Web Developer."],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    })
+</script>
+<!---hover scroll-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".nav-links a, a").on('click', function(){
+            $("html, body").animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+    });
+</script>
+</body> 
+</html>
